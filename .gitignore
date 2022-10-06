@@ -1,1 +1,4 @@
 /vendor/
+
+# Idea Files
+.idea/*
