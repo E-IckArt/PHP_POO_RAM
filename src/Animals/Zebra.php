@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Animal;
+namespace App\Animals;
 
 use App\Animal;
 
-class Whale extends Animal
+class Zebra extends Animal
 {
     public function __construct(string $name)
     {
@@ -13,6 +13,6 @@ class Whale extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does splash';
+        return 'The '. $this->getName(). ' does hiiiiiii.';
     }
 }

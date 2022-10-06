@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Animal;
+namespace App\Animals;
 
 use App\Animal;
 

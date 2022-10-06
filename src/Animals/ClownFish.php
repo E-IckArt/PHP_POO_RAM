@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Animal;
+namespace App\Animals;
 
 use App\Animal;
 
-class Fish extends Animal
+class ClownFish extends Animal
 {
     public function __construct(string $name)
     {
@@ -15,6 +15,4 @@ class Fish extends Animal
     {
         return 'The '. $this->getName(). ' does bloubloublou';
     }
-
 }
-

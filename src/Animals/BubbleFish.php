@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Animal;
+namespace App\Animals;
 
 use App\Animal;
 
-class CatFish extends Animal
+class BubbleFish extends Animal
 {
     public function __construct(string $name)
     {
