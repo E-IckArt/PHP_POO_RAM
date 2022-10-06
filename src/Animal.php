@@ -1,11 +1,13 @@
 <?php
 
 namespace App;
-Abstract Class Animal {
+
+abstract class Animal {
 
     private string $name;
 
-    public function __construct(string $name) {
+    public function __construct(string $name)
+    {
         $this->name = $name;
     }
 
@@ -17,13 +19,12 @@ Abstract Class Animal {
         return $this->name;
     }
 
-    protected function getNoise() : string {
-        return "Faites du bruit Annecy !!!";
+    protected abstract function getNoise() : string; // accessible seulement par les classes enfants
+
+    public function noise() : string // accessible par tous y compris app.php
+    {
+        return $this->getNoise();   // permet de récupérer la function getNoise qui est protégée et de l'utiliser à
+                                    // partir d'app.php
     }
-
-
-
-
-
 }
 

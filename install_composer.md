@@ -5,7 +5,7 @@
 - `php -v`
 - `curl --version`
 
-## Installer composer.phar dans le projet
+## Installer composer.phar dans le projet (si Composer n'est pas installer sur l'ordi)
 
 - Utiliser le fichier .phar du site composer ou 
 
@@ -19,7 +19,7 @@
 
 ou
 
-`composer init`
+`composer init` (si composer installé sur l'ordi)
 
 Renseigner les  différents champs.   
  

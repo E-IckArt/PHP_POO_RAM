@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Animal;
+
+use App\Animal;
 
 class Elephant extends Animal
 {

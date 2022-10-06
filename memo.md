@@ -171,4 +171,54 @@ if ($animal intanceOf (Cat)) {
 
 }
 ```
+## Objets Calisthenics
 
+### Les principes :
+
+**1. Un seul niveau d'indentation** (2 max), ex :
+
+```
+foreach {
+    if {
+        # code
+    }
+}
+```
+**2. Eviter l'usage de **"else"**, utiliser par exemple :
+
+```
+function() {
+    if($variable === null) {
+        throw error;
+    }
+}
+```
+
+**Attention à l'usage de Try/Catch !** 
+
+On **throw** les exceptions jusqu'à app.php
+Le seul fichier où on utiliser try/catch pour attraper les exceptions.
+
+**3. Encapsuler les types primitifs**
+
+Exemples :
+- utiliser Integer et pas int,
+- utiliser une liste et non un tableau [ ].
+
+**4. Un seul opérateur d'objet par ligne :**
+
+Exemple : 01->function();
+
+Car danes le cas 01->02->03->function() , si un des objets n'est pas instancié cela casse le code.
+
+
+**5. Ne pas abréger** les noms de variables, fonctions, classes, etc ...
+Si le nom est explicite le code nécessite moins de commentaires pour comprendre ce qu'il fait.
+
+**6. Faire des petites classes**
+
+=> Limiter le nombre de lignes de codes.
+
+**7. Limiter le nombre de propriétés dans une classe**
+**8. Voir le point 3**
+**9. Limiter les Getters/Setters**
