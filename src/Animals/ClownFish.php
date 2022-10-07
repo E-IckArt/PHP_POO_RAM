@@ -13,6 +13,6 @@ class ClownFish extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does bloubloublou';
+        return "{$this->getName()} does bloubloublou. \n";
     }
 }

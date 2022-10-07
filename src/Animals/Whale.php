@@ -13,6 +13,6 @@ class Whale extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does splash';
+        return "{$this->getName()} does splash \n";
     }
 }

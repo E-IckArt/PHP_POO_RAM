@@ -13,6 +13,6 @@ class Dove extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does Rou Rouuuuu.';
+        return "{$this->getName()} Rou Rouuuuu. \n";
     }
 }

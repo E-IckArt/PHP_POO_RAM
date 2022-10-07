@@ -13,6 +13,6 @@ class Zebra extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does hiiiiiii.';
+        return "{$this->getName()} does hiiiii \n";
     }
 }

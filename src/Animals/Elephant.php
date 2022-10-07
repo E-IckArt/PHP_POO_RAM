@@ -13,6 +13,6 @@ class Elephant extends Animal
 
     protected function getNoise(): string
     {
-        return 'The '. $this->getName(). ' does toooooooout.';
+        return "{$this->getName()} does toooooooout. \n";
     }
 }
