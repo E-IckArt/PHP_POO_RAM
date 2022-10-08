@@ -1,10 +1,10 @@
 <?php
 namespace App;
 
-
 // Indiquer le chemin vers la dépendance autoload.
 require __DIR__ . '/vendor/autoload.php';
 
+# Indiquer les namespaces à utiliser.
 use App\Animals\BubbleFish;
 use App\Animals\CatFish;
 use App\Animals\ClownFish;
@@ -19,87 +19,47 @@ use App\Animals\Zebra;
 
 $animals = array();
 
-// Créer une boucle pour créer 5 Fishes
+$bubbleFishes = array();
+$catfishes = array();
+$clownFishes = array();
+$doves = array();
+$elephants = array();
+$fishes = array();
+$parrots = array();
+$whales = array();
+$zebras = array();
 
-for($i=0; $i < 5; $i++) {
 
-    $fishes[] = new Fish('Fish '. $i+1);
-    echo($fishes[$i]->noise());
 
-}
+function createAnimals(array &$animals, $animalSpecies, $numberOfAnimals, $animalName = "newAnimal ") : void
+{
+    // Instancier les nouveaux animaux
+    for($i=0; $i < $numberOfAnimals; $i++) {
 
-// Créer une boucle pour créer 3 BubbleFishes
-
-for($i=0; $i < 4; $i++) {
-
-    $bubbleFishes[] = new BubbleFish('BubbleFish '. $i+1);
-    echo($bubbleFishes[$i]->noise());
-
-}
-
-// Créer une boucle pour créer 2 CatFishes
-
-for($i=0; $i < 3; $i++) {
-
-    $catFishes[] = new CatFish('CatFish '. $i+1);
-    echo($catFishes[$i]->noise());
-
-}
-
-// Créer une boucle pour créer 1 ClownFish
-
-for($i=0; $i < 1; $i++) {
-
-    $clownFishes[] = new ClownFish('ClownFish '. $i+1);
-    echo($clownFishes[$i]->noise());
+        $animalSpecies[] = new Fish($animalName. $i+1);
+        echo($animalSpecies[$i]->noise()).PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($animalSpecies as $animal) {
+        $animals[] = $animal;
+    }
 
 }
 
-// Créer une boucle pour créer 2 Elephants
 
-for($i=0; $i < 2; $i++) {
 
-    $elephants[] = new Elephant('Elephant '. $i+1);
-    echo($elephants[$i]->noise());
+# TODO - Complete or delete this line and keep previous ones.
+echo "test - start ".PHP_EOL;
 
-}
+createAnimals($animals, $fishes,5, 'Polochon ');
+createAnimals($animals, $bubbleFishes, 4, 'Boobaaaaa ');
+createAnimals($animals, $catfishes, 3, 'Catxou ');
+createAnimals($animals, $clownFishes, 1,'Nemo ');
+createAnimals($animals, $elephants, 2, 'Doobow ');
+createAnimals($animals, $zebras, 1, 'Zaboo');
+createAnimals($animals, $parrots, 10, 'Coco ');
+createAnimals($animals, $doves, 2, 'Plum ');
 
-// Créer une boucle pour créer 1 Zebra
-
-for($i=0; $i < 1; $i++) {
-
-    $zebras[] = new Zebra('Zebra '. $i+1);
-    echo($zebras[$i]->noise());
-
-}
-
-// Créer une boucle pour créer 10 Parrots
-
-for($i=0; $i < 11; $i++) {
-
-    $parrots[] = new Parrot('Parrot '. $i+1);
-    echo($parrots[$i]->noise());
-
-}
-
-// Créer une boucle pour créer 2 Doves
-
-for($i=0; $i < 2; $i++) {
-
-    $doves[] = new Dove('Dove '. $i+1);
-    echo($doves[$i]->noise());
-
-}
-
-$animals[] .= $fishes;
-$animals[] .= $bubbleFishes;
-$animals[] .= $catFishes;
-$animals[] .= $clownFishes;
-$animals[] .= $elephants;
-$animals[] .= $zebras;
-$animals[] .= $parrots;
-$animals[] .= $doves;
-
-print_r($animals[]);
+echo "test - end ".PHP_EOL;
 
 

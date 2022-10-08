@@ -3,8 +3,9 @@
 namespace App\Animals;
 
 use App\Animal;
+use App\Interfaces\CanFly;
 
-class Dove extends Animal
+class Dove extends Animal implements CanFly
 {
     public function __construct(string $name)
     {
