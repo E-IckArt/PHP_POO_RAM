@@ -9,7 +9,7 @@ class Fish extends Animal
 {
 
 
-    public function __construct(string $name = "Polochon")
+    public function __construct(string $name)
     {
         parent::__construct($name);
     }

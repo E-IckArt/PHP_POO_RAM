@@ -31,7 +31,7 @@ $zebras = array();
 
 
 
-function createAnimals(array &$animals, $animalSpecies, $numberOfAnimals, $animalName = "newAnimal ") : void
+function createAnimals(array &$animals, $animalSpecies, $numberOfAnimals, $animalName = "newAnimal") : void
 {
     // Instancier les nouveaux animaux
     for($i=0; $i < $numberOfAnimals; $i++) {
@@ -59,6 +59,7 @@ createAnimals($animals, $elephants, 2, 'Doobow ');
 createAnimals($animals, $zebras, 1, 'Zaboo');
 createAnimals($animals, $parrots, 10, 'Coco ');
 createAnimals($animals, $doves, 2, 'Plum ');
+createAnimals($animals, $whales, 2, 'MobyDick');
 
 echo "test - end ".PHP_EOL;
 
