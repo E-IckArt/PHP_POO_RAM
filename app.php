@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 // Indiquer le chemin vers la dépendance autoload.
@@ -17,7 +18,6 @@ use App\Animals\Zebra;
 
 // TODO - Créer un tableau contenant les animaux et itérer dessus
 
-$animals = array();
 
 $bubbleFishes = array();
 $catfishes = array();
@@ -29,38 +29,147 @@ $parrots = array();
 $whales = array();
 $zebras = array();
 
+$animals = array($bubbleFishes, $catfishes, $clownFishes, $doves, $elephants, $fishes, $parrots, $whales, $zebras);
 
 
-function createAnimals(array &$animals, $animalSpecies, $numberOfAnimals, $animalName = "newAnimal") : void
+function createFishes(array &$animals, array $fishes, int $numberOfAnimals, string $animalName = "newFish"): void
 {
     // Instancier les nouveaux animaux
-    for($i=0; $i < $numberOfAnimals; $i++) {
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
 
-        $animalSpecies[] = new Fish($animalName. $i+1);
-        echo($animalSpecies[$i]->noise()).PHP_EOL;
+        $fishes[] = new Fish($animalName . $i + 1);
+        echo ($fishes[$i]->noise()) . PHP_EOL;
     }
     // Les ajouter dans le tableau de l'espèce
-    foreach ($animalSpecies as $animal) {
-        $animals[] = $animal;
+    foreach ($fishes as $fish) {
+        $animals[] = $fish;
     }
+}
 
+function createBubbleFishes(array &$animals, array $bubbleFishes, int $numberOfAnimals, string $animalName = "newBubbleFish"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $bubbleFishes[] = new BubbleFish($animalName . $i + 1);
+        echo ($bubbleFishes[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($bubbleFishes as $bubbleFish) {
+        $animals[] = $bubbleFish;
+    }
+}
+
+function createCatFishes(array &$animals, array $catFishes, int $numberOfAnimals, string $animalName = "newCatFish"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $catFishes[] = new CatFish($animalName . $i + 1);
+        echo ($catFishes[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($catFishes as $catFish) {
+        $animals[] = $catFish;
+    }
+}
+
+function createClownFishes(array &$animals, array $clownFishes, int $numberOfAnimals, string $animalName = "newClownFish"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $clownFishes[] = new ClownFish($animalName . $i + 1);
+        echo ($clownFishes[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($clownFishes as $clownFish) {
+        $animals[] = $clownFish;
+    }
+}
+
+function createElephants(array &$animals, array $elephants, int $numberOfAnimals, string $animalName = "newElephant"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $elephants[] = new Elephant($animalName . $i + 1);
+        echo ($elephants[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($elephants as $elephant) {
+        $animals[] = $elephant;
+    }
+}
+
+function createZebras(array &$animals, array $zebras, int $numberOfAnimals, string $animalName = "newZebra"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $zebras[] = new Zebra($animalName . $i + 1);
+        echo ($zebras[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($zebras as $zebra) {
+        $animals[] = $zebra;
+    }
+}
+
+function createParrots(array &$animals, array $parrots, int $numberOfAnimals, string $animalName = "newParrot"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $parrots[] = new Parrot($animalName . $i + 1);
+        echo ($parrots[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($parrots as $parrot) {
+        $animals[] = $parrot;
+    }
+}
+
+function createDoves(array &$animals, array $doves, int $numberOfAnimals, string $animalName = "newDove"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $doves[] = new Dove($animalName . $i + 1);
+        echo ($doves[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($doves as $dove) {
+        $animals[] = $dove;
+    }
+}
+
+function createWhales(array &$animals, array $whales, int $numberOfAnimals, string $animalName = "newWhale"): void
+{
+    // Instancier les nouveaux animaux
+    for ($i = 0; $i < $numberOfAnimals; $i++) {
+
+        $whales[] = new Whale($animalName . $i + 1);
+        echo ($whales[$i]->noise()) . PHP_EOL;
+    }
+    // Les ajouter dans le tableau de l'espèce
+    foreach ($whales as $whale) {
+        $animals[] = $whale;
+    }
 }
 
 
+# TODO - Complete or delete this line and keep previous ones (see scratch_app.php).
 
-# TODO - Complete or delete this line and keep previous ones.
-echo "test - start ".PHP_EOL;
+createFishes($animals, $fishes, 5, 'Polochon ');
+createBubbleFishes($animals, $bubbleFishes, 4, 'Boobaaaaa ');
+createCatFishes($animals, $catfishes, 3, 'Catxou ');
+createClownFishes($animals, $clownFishes, 1, 'Nemo ');
+createElephants($animals, $elephants, 2, 'Doobow ');
+createZebras($animals, $zebras, 1, 'Zaboo');
+createParrots($animals, $parrots, 10, 'Coco ');
+createDoves($animals, $doves, 2, 'Plum ');
+createWhales($animals, $whales, 2, 'MobyDick');
 
-createAnimals($animals, $fishes,5, 'Polochon ');
-createAnimals($animals, $bubbleFishes, 4, 'Boobaaaaa ');
-createAnimals($animals, $catfishes, 3, 'Catxou ');
-createAnimals($animals, $clownFishes, 1,'Nemo ');
-createAnimals($animals, $elephants, 2, 'Doobow ');
-createAnimals($animals, $zebras, 1, 'Zaboo');
-createAnimals($animals, $parrots, 10, 'Coco ');
-createAnimals($animals, $doves, 2, 'Plum ');
-createAnimals($animals, $whales, 2, 'MobyDick');
-
-echo "test - end ".PHP_EOL;
-
-
+// var_dump();
+print_r($animals);

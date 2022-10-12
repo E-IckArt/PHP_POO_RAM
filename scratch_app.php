@@ -13,55 +13,56 @@ use App\Animals\Dove;
 use App\Animals\Elephant;
 use App\Animals\Fish;
 use App\Animals\Parrot;
+use App\Animals\Whale;
 use App\Animals\Zebra;
 
+
 // Créer une boucle pour créer 5 Fishes
-function create_Fishes($numberOfFishes) :void
+function create_Fishes($numberOfFishes, string $animalName = 'Fish') :void
 {
     for($i=0; $i < $numberOfFishes; $i++) {
 
-        $fishes[] = new Fish('Fish '. $i+1);
+        $fishes[] = new Fish($animalName. $i+1);
         echo($fishes[$i]->noise()).PHP_EOL;
 
     }
 }
 
 // Créer une boucle pour créer 3 BubbleFishes
-function create_bubbleFishes($numberOfBubbleFishes) : void {
+function create_bubbleFishes($numberOfBubbleFishes, string $animalName = 'BubbleFish') : void {
     for($i=0; $i < $numberOfBubbleFishes; $i++) {
 
-        $bubbleFishes[] = new BubbleFish('BubbleFish '. $i+1);
+        $bubbleFishes[] = new BubbleFish($animalName. $i+1);
         echo($bubbleFishes[$i]->noise()).PHP_EOL;
 
     }
 }
 
 // Créer une boucle pour créer 2 CatFishes
-function create_CatFishes($numberOfCatFishes) : void {
+function create_CatFishes($numberOfCatFishes,string $animalName = 'CatFish') : void {
     for($i=0; $i < $numberOfCatFishes; $i++) {
 
-        $catFishes[] = new CatFish('CatFish ' . $i + 1);
+        $catFishes[] = new CatFish($animalName. $i+1);
         echo($catFishes[$i]->noise()).PHP_EOL;
 
     }
 }
 
-
 // Créer une boucle pour créer 1 ClownFish
-function create_ClownFishes($numberOfClownFishes) : void {
+function create_ClownFishes($numberOfClownFishes, string $animalName = 'ClownFish ') : void {
     for ($i = 0; $i < $numberOfClownFishes; $i++) {
 
-        $clownFishes[] = new ClownFish('ClownFish ' . $i + 1);
+        $clownFishes[] = new ClownFish( $animalName. $i+1);
         echo($clownFishes[$i]->noise()).PHP_EOL;
 
     }
 }
 
 // Créer une boucle pour créer 2 Elephants
-function create_Elephant($numberOfElephants) : void {
-    for($i=0; $i < 2; $i++) {
+function create_Elephants($numberOfElephants, string $animalName = 'Elephant') : void {
+    for($i=0; $i < $numberOfElephants; $i++) {
 
-        $elephants[] = new Elephant('Elephant ' . $i + 1);
+        $elephants[] = new Elephant($animalName . $i + 1);
         echo($elephants[$i]->noise()).PHP_EOL;
 
     }
@@ -69,36 +70,50 @@ function create_Elephant($numberOfElephants) : void {
 
 
 // Créer une boucle pour créer 1 Zebra
+function create_Zebras($numberOfZebras, string $animalName = 'Zebra') : void {
+    for($i=0; $i < $numberOfZebras; $i++) {
 
-for($i=0; $i < 1; $i++) {
-
-    $zebras[] = new Zebra('Zebra '. $i+1);
-    echo($zebras[$i]->noise()).PHP_EOL;
-
+        $zebras[] = new Zebra($animalName . $i + 1);
+        echo ($zebras[$i]->noise()) . PHP_EOL;
+    }
 }
 
 // Créer une boucle pour créer 10 Parrots
+function create_Parrots($numberOfParrots, string $animalName = 'Parrot ' ) : void {
+    for($i=0; $i < $numberOfParrots; $i++) {
 
-for($i=0; $i < 11; $i++) {
-
-    $parrots[] = new Parrot('Parrot '. $i+1);
-    echo($parrots[$i]->noise()).PHP_EOL;
-
+        $parrots[] = new Parrot($animalName . $i + 1);
+        echo ($parrots[$i]->noise()) . PHP_EOL;
+    }
 }
 
 // Créer une boucle pour créer 2 Doves
+function create_Doves($numberOfDoves, string $animalName = 'Dove ') : void {
+    for($i=0; $i < $numberOfDoves; $i++) {
 
-for($i=0; $i < 2; $i++) {
-
-    $doves[] = new Dove('Dove '. $i+1);
-    echo($doves[$i]->noise());
-
+        $doves[] = new Dove($animalName . $i + 1);
+        echo($doves[$i]->noise()). PHP_EOL;
+    }
 }
 
-create_Fishes(5);
-create_bubbleFishes(4);
-create_CatFishes(3);
-create_ClownFishes(1);
+// Créer une boucle pour créer 2 Whales
+function create_Whales($numberOfWhales, string $animalName = 'Whale') : void {
+    for($i=0; $i < $numberOfWhales; $i++) {
+
+        $whales[] = new Whale($animalName . $i + 1);
+        echo($whales[$i]->noise()). PHP_EOL;
+    }
+}
+
+create_Fishes(5, 'Polochon ');
+create_bubbleFishes(4, 'Boobaaaaa ');
+create_CatFishes(3, 'Catxou ');
+create_ClownFishes(1, 'Nemo ');
+create_Elephants(2, 'Doobow ');
+create_Zebras(1, 'Zaboo ');
+create_Parrots(10, 'Coco ');
+create_Doves(2, 'Plum ');
+create_Whales(2, 'MobyDick ' );
 
 
 # TODO - Complete these lines to get a complete array.

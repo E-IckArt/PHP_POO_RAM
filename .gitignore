@@ -2,3 +2,6 @@
 
 # Idea Files
 .idea/*
+
+# Vs code
+.vscode/*

@@ -7,13 +7,8 @@ use App\Interfaces\CanSwim;
 
 class Whale extends Animal implements CanSwim
 {
-    public function __construct(string $name)
-    {
-        parent::__construct($name);
-    }
-
     protected function getNoise(): string
     {
-        return "{$this->getName()} does splash \n";
+        return "{$this->getName()} does splash.";
     }
 }
