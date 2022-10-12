@@ -16,9 +16,7 @@ use App\Animals\Parrot;
 use App\Animals\Whale;
 use App\Animals\Zebra;
 
-// TODO - Créer un tableau contenant les animaux et itérer dessus
-
-
+// Declaration of Animals species arrays.
 $bubbleFishes = array();
 $catfishes = array();
 $clownFishes = array();
@@ -29,6 +27,7 @@ $parrots = array();
 $whales = array();
 $zebras = array();
 
+// Declaration and initialization of array $animals.
 $animals = array($bubbleFishes, $catfishes, $clownFishes, $doves, $elephants, $fishes, $parrots, $whales, $zebras);
 
 
